@@ -1,0 +1,113 @@
+Assessment(a1):
+  weight: 69.1
+  chest: 11
+  thigh: 11.1
+  upperarm: 11
+  waist: 11
+  hips: 11
+  comment: Assessment 1
+Assessment(a2):
+  weight: 68.2
+  chest: 22
+  thigh: 12.2
+  upperarm: 12
+  waist: 12
+  hips: 12
+  comment: Assessment 2
+Assessment(a3):
+  weight: 53.3
+  chest: 33
+  thigh: 13
+  upperarm: 13
+  waist: 13
+  hips: 13
+  comment: Assessment 3
+Assessment(a4):
+  weight: 54.4
+  chest: 44
+  thigh: 14.4
+  upperarm: 14
+  waist: 14
+  hips: 14
+  comment: Assessment 4
+Assessment(a5):
+  weight: 55.5
+  chest: 55
+  thigh: 15.5
+  upperarm: 15
+  waist: 15
+  hips: 15
+  comment: Assessment 5
+Assessment(a6):
+  weight: 46.6
+  chest: 26
+  thigh: 16.6
+  upperarm: 16
+  waist: 26
+  hips: 16
+  comment: Assessment 6
+Assessment(a7):
+  weight: 45.7
+  chest: 37
+  thigh: 17
+  upperarm: 17
+  waist: 17
+  hips: 17
+  comment: Assessment 7
+
+Member(m1):
+  firstname: homer
+  lastname: simpson
+  address: springfield
+  gender: Male
+  height: 1.9
+  startingWeight:  70
+  email: homer@simpson.com
+  password: secret
+  assessments:
+  - a1
+  - a2
+  - a3
+
+Member(m2):
+  firstname: marge
+  lastname: simpson
+  address: springfield
+  gender: Male
+  height: 1.9
+  startingWeight:  58
+  email: marge@simpson.com
+  password: secret
+  assessments:
+  - a4
+  - a5
+
+Member(m3):
+  firstname: lisa
+  lastname: simpson
+  address: springfield
+  gender: Female
+  height: 1.9
+  startingWeight:  48
+  email: lisa@simpson.com
+  password: secret
+  assessments:
+  - a6
+  - a7
+
+Trainer(t1):
+  trainerName: trainer1 simpson
+  trainerEmail: t1@simpson.com
+  trainerPassword: secret
+  members:
+  - m1
+
+Trainer(t2):
+  trainerName: trainer2 simpson
+  trainerEmail: t2@simpson.com
+  trainerPassword: secret
+  members:
+  - m2
+
+
+

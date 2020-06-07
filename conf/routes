@@ -1,0 +1,44 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                       Start.index
+GET    /start                                   Start.index
+GET    /dashboard/about                         Dashboard.About
+GET    /login                                   Accounts.login
+# Register
+POST   /register                                Accounts.register
+# check for valid login
+POST   /authenticate                            Accounts.authenticate
+# logout
+GET    /logout                                  Accounts.logout
+GET    /signup                                  Accounts.signup
+GET    /admin                                   Admin.index
+
+GET     /dashboard                                                  Dashboard.Allindex
+GET     /memberdashboard                                            Dashboard.index
+GET     /trainer                                                    Trainer.Index
+GET     /trainer/deletemember/{id}                                  GymCtrl.deleteMember
+GET     /trainer/{id}/deleteassessment/{assessmentid}               GymCtrl.deleteAssessment
+POST    /dashboard/addAssessment                                    GymCtrl.addAssessment
+
+#POST    /dashboard/deleteAssessment                                 GymCtrl.deleteAssessment
+POST     /dashboard/deleteAssessment/{id}                          GymCtrl.deleteAssessment
+GET      /dashboard/deleteAssessment/{id}                           GymCtrl.deleteAssessment
+
+GET     /members/{id}                                               GymCtrl.index
+GET     /assessments/{id}                                           GymCtrl.assessmentindex
+#GET     /trainer/deletemember/{id}                                 GymCtrl.deleteMember
+POST    /addcomment/{id}                                            GymCtrl.addComment
+
+trainer.Member[8][Assessment[1], Assessment[2], Assessment[3]] action not found
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}

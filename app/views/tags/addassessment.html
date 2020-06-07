@@ -1,0 +1,61 @@
+<form class="ui stacked segment form" action="/dashboard/addassessment" method="POST">
+    <div class="fields">
+        <div class="field">
+            <label>Weight</label>
+            <input placeholder="00.00" type="text" name="weight">
+        </div>
+        <div class="field">
+            <label>Chest</label>
+            <input placeholder="00.00" type="text" name="chest">
+        </div>
+        <div class="field">
+            <label>Thigh</label>
+            <input placeholder="00.00" type="text" name="thigh">
+        </div>
+    </div>
+    <div class="fields">
+        <div class="field">
+            <label>Upper Arm</label>
+            <input placeholder="00.00" type="text" name="upperarm">
+        </div>
+        <div class="field">
+            <label>Waist</label>
+            <input placeholder="00.00" type="text" name="waist">
+        </div>
+        <div class="field">
+            <label>Hips</label>
+            <input placeholder="00.00" type="text" name="hips">
+        </div>
+    </div>
+    <button class="ui blue submit button">Add Assessment</button>
+</form>
+<table class="ui celled table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Date</th>
+        <th>Weight</th>
+        <th>Chest</th>
+        <th>Thigh</th>
+        <th>Upper Arm</th>
+        <th>Waist</th>
+        <th>Hips</th>
+        <th>Comments</th>
+    </tr>
+    </thead>
+    <tbody>
+    #{list items:assessments, as:'assessment'}
+    <tr>
+        <td> ${assessment.date} </td>
+        <td> ${assessment.weight} </td>
+        <td> ${assessment.chest} </td>
+        <td> ${assessment.thigh} </td>
+        <td> ${assessment.upperarm} </td>
+        <td> ${assessment.waist} </td>
+        <td> ${assessment.hips} </td>
+        <td> ${assessment.comment} </td>
+        <td> <a href="/dashboard/${member.id}/addAssessment/${assessment.id} " class="ui icon button"> Delete </a> <i class="icon trash"></i></td>
+    </tr>
+    #{/list}
+    </tbody>
+</table>
